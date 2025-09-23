@@ -1,0 +1,636 @@
+/* =============================================================================
+   Sandra's Portfolio - Consolidated Styles
+   All styles combined into one clean file for better organization
+   ============================================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* =============================================================================
+   CSS Variables & Reset
+   ============================================================================= */
+:root {
+    --primary-color: #ae55f7;
+    --primary-color-dark: #9333ea;
+    --secondary-color: #ca8a04;
+    --text-dark: #1f2937;
+    --text-light: #6b7288;
+    --extra-light: #faf5ff;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+}
+
+/* =============================================================================
+   Navigation
+   ============================================================================= */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 99;
+    font-size: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav_content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    transition: 0.3s;
+}
+
+nav .logo a:hover {
+    color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+    display: none;
+}
+
+nav .input {
+    display: none;
+}
+
+nav .checkbox i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+ul li a {
+    padding: 0.5rem;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+ul li a:hover {
+    border-top-color: #ff004f;
+    border-bottom-color: #ff004f;
+    color: #ff004f;
+}
+
+/* =============================================================================
+   Home Page Styles
+   ============================================================================= */
+.section {
+    background-color: var(--extra-light);
+}
+
+.section_container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtitle {
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.title span {
+    font-weight: 600;
+}
+
+.description {
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+}
+
+.action {
+    display: flex;
+    gap: 1rem;
+}
+
+.action button {
+    font-size: large;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 10px 30px;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.getto_knowme {
+    background-color: var(--primary-color-dark);
+    color: white;
+}
+
+.getto_knowme:hover {
+    background-color: var(--primary-color);
+}
+
+.portfolio {
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.portfolio:hover {
+    background-color: var(--primary-color-dark);
+    color: white;
+}
+
+.image {
+    display: grid;
+    place-items: center;
+    margin-top: 100px;
+}
+
+.image img {
+    width: 400px;
+    clip-path: circle();
+}
+
+/* =============================================================================
+   About Page Styles
+   ============================================================================= */
+body.about-page {
+    background-color: #c8addf;
+}
+
+.heading {
+    text-align: center;
+    padding: 2rem;
+}
+
+#portfolio {
+    padding: 50px 0;
+}
+
+.work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+.layer h3 {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover .layer {
+    height: 100%;
+}
+
+.words {
+    color: white;
+    font-size: large;
+}
+
+.spesio {
+    color: beige;
+}
+
+/* Interest Cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.card {
+    width: 325px;
+    background-color: var(--primary-color);
+    border-radius: 30px;
+    overflow: hidden;
+    transition: transform 0.6s ease;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: x-large;
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.card-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.card-button {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 8px 16px;
+    background-color: var(--primary-color-dark);
+    color: white;
+}
+
+/* Slideshow Styles */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+    color: var(--text-dark);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 200px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
+
+/* =============================================================================
+   Contact Page Styles
+   ============================================================================= */
+body.contact-page {
+    background-color: rgb(211, 173, 186);
+    font-size: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.container p {
+    margin-bottom: 40px;
+}
+
+.contact-box {
+    background-color: var(--primary-color);
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contact-left {
+    flex-basis: 60%;
+    padding: 40px 60px;
+}
+
+.contact-right {
+    flex-basis: 40%;
+    padding: 40px 60px;
+    background: var(--primary-color-dark);
+    color: #fff;
+}
+
+.input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input-row .input-group {
+    flex-basis: 45%;
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+textarea {
+    width: 100%;
+    border: 3px solid #ccc;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+label {
+    margin-bottom: 6px;
+    display: block;
+    color: var(--text-dark);
+}
+
+button {
+    background: pink;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--primary-color-dark);
+    color: white;
+}
+
+.contact-left h3 {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.contact-right h3 {
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.flexing {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 15px;
+}
+
+/* =============================================================================
+   Footer
+   ============================================================================= */
+footer {
+    background-color: var(--text-dark);
+}
+
+.footerContainer {
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.socialIcons a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+    transition: 0.6s;
+}
+
+.socialIcons a i {
+    font-size: 2rem;
+    opacity: 0.9;
+}
+
+.socialIcons a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-5px);
+}
+
+.footerNav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footerNav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+    opacity: 1;
+    color: var(--primary-color);
+}
+
+.footerBottom {
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footerBottom p {
+    color: white;
+}
+
+.designer {
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0 5px;
+}
+
+/* =============================================================================
+   Responsive Design
+   ============================================================================= */
+@media (max-width: 750px) {
+    nav .checkbox {
+        display: block;
+    }
+    
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background-color: var(--extra-light);
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 3rem;
+        padding-top: 3rem;
+        transition: left 0.3s;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    ul li a {
+        font-size: 1.25rem;
+    }
+
+    .section_container {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .image {
+        grid-area: 1/1/2/2;
+    }
+
+    .action {
+        justify-content: center;
+    }
+
+    .contact-box {
+        flex-direction: column;
+    }
+
+    .input-row {
+        flex-direction: column;
+    }
+
+    .input-row .input-group {
+        flex-basis: 100%;
+        margin-bottom: 15px;
+    }
+}

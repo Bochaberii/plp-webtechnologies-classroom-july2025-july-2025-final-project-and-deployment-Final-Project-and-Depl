@@ -1,0 +1,13 @@
+{
+  "name": "sandra-portfolio",
+  "version": "1.0.0",
+  "description": "Sandra's Personal Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["portfolio", "website", "personal"],
+  "author": "Sandra",
+  "license": "MIT"
+}
