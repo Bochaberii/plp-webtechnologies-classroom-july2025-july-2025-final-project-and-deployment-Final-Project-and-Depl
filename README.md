@@ -3,7 +3,7 @@
 A clean, modern, and responsive portfolio website showcasing my journey as an electrical engineering student with interests in IoT, web development, and UI/UX design.
 ##  Live Demo
 
-[Visit the live website](portfoliowebsite-navy-ten.vercel.app)
+[Visit the live website](https://portfoliowebsite-navy-ten.vercel.app/)
 
 ##  Features
 
